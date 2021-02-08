@@ -1,6 +1,7 @@
 import supertest from 'supertest';
-
 import config from '../config';
+
+import {Cake} from '../src/models';
 
 const request = supertest(`http://localhost:${config.PORT}`);
 
@@ -10,7 +11,7 @@ describe('Cakes controller', () => {
         get('/cakes').
         set('Accept', 'application/json').
         expect('Content-Type', /json/).
-        expect(200, done);
+        expect(200, Cake.all(), done);
   });
 
   test('Should respond with the cake that has the id 1', (done) => {
@@ -18,15 +19,20 @@ describe('Cakes controller', () => {
         get('/cakes/1').
         set('Accept', 'application/json').
         expect('Content-Type', /json/).
-        expect(200, done);
+        expect(200, Cake.get('1'), done);
   });
 
   test('Should respond with the new cake', (done) => {
+    const newCake = {name: 'red velvet', price: 500, flavors: ['velvet']};
+
     request.
         post('/cakes').
-        send({name: 'red velvet', price: 500, flavors: ['velvet']}).
+        send(newCake).
         set('Accept', 'application/json').
         expect('Content-Type', /json/).
-        expect(201, done);
+        expect(function(res) {
+          res.body.id = 'cakeid';
+        }).
+        expect(201, {id: 'cakeid', ...newCake}, done);
   });
 });
