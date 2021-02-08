@@ -2,10 +2,10 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
-  // All imported modules in your tests should be mocked automatically
+  // All imported modules in your __tests__ should be mocked automatically
   // automock: false,
 
-  // Stop running tests after `n` failures
+  // Stop running __tests__ after `n` failures
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
@@ -60,7 +60,7 @@ module.exports = {
   // A set of global variables that need to be available in all test environments
   // globals: {},
 
-  // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
+  // The maximum amount of workers used to run your __tests__. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
@@ -93,7 +93,7 @@ module.exports = {
   // A preset that is used as a base for Jest's configuration
   // preset: undefined,
 
-  // Run tests from one or more projects
+  // Run __tests__ from one or more projects
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
@@ -111,7 +111,7 @@ module.exports = {
   // Automatically restore mock state between every test
   // restoreMocks: false,
 
-  // The root directory that Jest should scan for tests and modules within
+  // The root directory that Jest should scan for __tests__ and modules within
   // rootDir: undefined,
 
   // A list of paths to directories that Jest should use to search for files in
@@ -146,7 +146,7 @@ module.exports = {
   //   "**/?(*.)+(spec|test).[tj]s?(x)"
   // ],
 
-  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
+  // An array of regexp pattern strings that are matched against all test paths, matched __tests__ are skipped
   // testPathIgnorePatterns: [
   //   "\\\\node_modules\\\\"
   // ],
@@ -180,7 +180,7 @@ module.exports = {
   // Indicates whether each individual test should be reported during the run
   // verbose: undefined,
 
-  // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
+  // An array of regexp patterns that are matched against all source file paths before re-running __tests__ in watch mode
   // watchPathIgnorePatterns: [],
 
   // Whether to use watchman for file crawling

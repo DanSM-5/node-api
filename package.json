@@ -4,7 +4,7 @@
   "description": "Simple API project skeleton with basic configuration of babel, express, and jest",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "__tests__"
   },
   "scripts": {
     "test": "jest",
@@ -14,8 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "memoizee": "^0.4.14",
-    "node-fetch": "^2.6.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

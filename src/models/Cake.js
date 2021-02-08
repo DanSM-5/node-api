@@ -20,11 +20,11 @@ export default {
   get: (id) => CAKES[id],
   create: (data) => {
     const newCake = {
-      id: uuidv4(),
       ...data,
+      id: uuidv4(),
     };
 
-    CAKES[uuidv4()] = newCake;
+    CAKES[newCake.id] = newCake;
 
     return newCake;
   },
