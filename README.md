@@ -1,1 +1,0 @@
-This is a project skeleton to set up a node server easily
