@@ -7,6 +7,7 @@ import {homeRouter, cakesRouter} from './src/routes/index.js';
 const app = express();
 const PORT = config.PORT;
 
+// This is mainly used for POST and PUT request which send a payload
 app.use(express.json()); // built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser
 app.use(express.urlencoded({extended: false})); // is a method inbuilt in express to recognize the incoming Request Object as strings or arrays.
 
