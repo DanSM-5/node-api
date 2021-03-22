@@ -16,16 +16,7 @@ const CAKES = {
 };
 
 export default {
-  all: () => Object.values(CAKES),
-  get: (id) => CAKES[id],
-  create: (data) => {
-    const newCake = {
-      ...data,
-      id: uuidv4(),
-    };
-
-    CAKES[newCake.id] = newCake;
-
-    return newCake;
-  },
+  all: () => {},
+  get: (id) => {},
+  create: () => {},
 };
