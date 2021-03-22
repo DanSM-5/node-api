@@ -13,3 +13,32 @@ To run the project you only need to run the start command
 ```
 npm start
 ```
+
+
+### Commands we'll be using
+
+#### **Getting all the cakes:**
+```
+curl localhost:3015/cakes -v 
+```
+
+#### **Getting a specific cake:**
+```
+curl localhost:3015/cakes/:id -v 
+```
+
+#### **Storing a cake:**
+```
+curl -X POST localhost:3015/cakes -v -H 'Content-Type: application/json' -d '{"name":"velvet","price":100,"flavors":["velvet"]}' 
+```
+
+#### **Deleting a cake:**
+```
+curl -X DELETE localhost:3015/cakes/:id -v' 
+```
+
+#### **Updating a cake:**
+```
+curl -X PUT localhost:3015/cakes -v -H 'Content-Type: application/json' -d '{"id": 1,"name":"velvet","price":100,"flavors":["velvet"]}' 
+```
+
