@@ -4,7 +4,7 @@ const CAKES = {
   '1': {
     id: '1',
     name: 'Chocolate',
-    price: 300,
+    price: 150,
     flavors: ['milk', 'chocolate'],
   },
   '2': {
